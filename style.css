@@ -1,0 +1,164 @@
+/* Allgemeine Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #181818;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+.actions{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+/* Titel */
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Form Container */
+.form-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+
+.form-container input {
+    padding: 12px;
+    font-size: 16px;
+    width: 18%;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: #222;
+    color: white;
+}
+
+.form-container input:focus {
+    outline: none;
+    border-color: #ffcc00;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #5a584f;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #e6b800;
+}
+
+.btn-secondary {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #444;
+}
+
+/* Spalten */
+.board {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+    padding: 15px;
+    border-radius: 10px;
+    min-height: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.column h2 {
+    margin-bottom: 10px;
+}
+
+.offen {
+    background-color: #4c4c4a;
+}
+
+.warten {
+    background-color: #686969;
+}
+
+.erledigt {
+    background-color: #707472;
+}
+
+/* Aufgaben */
+.task-list {
+    min-height: 250px;
+    padding: 10px;
+}
+
+.task {
+    background: #222;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: grab;
+    user-select: none;
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.task:hover {
+    background: #292929;
+    transform: scale(1.02);
+}
+
+/* Löschen-Button */
+.task button {
+    float: right;
+    background-color: rgb(216, 184, 39);
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.task button:hover {
+    background-color: darkred;
+}

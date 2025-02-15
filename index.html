@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Terminplaner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Business Terminplaner</h1>
+        
+        <div class="form-container">
+            <input type="text" id="new-task" placeholder="Terminbeschreibung">
+            <input type="date" id="task-date">
+            <input type="time" id="task-start">
+            <input type="time" id="task-end">
+            <button class="btn-primary" onclick="addTask()">➕ Hinzufügen</button>
+        </div>
+
+        <div class="actions">
+            <button class="btn-secondary" onclick="saveToFile()">💾 Speichern</button>
+            <input type="file" id="file-input" onchange="loadFromFile(event)">
+            <button class="btn-secondary" onclick="loadFromFileButton()">📂 Datei Laden</button>
+        </div>
+
+        <div class="board">
+            <div class="column offen">
+                <h2> Offen</h2>
+                <div class="task-list" id="offen" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+            <div class="column warten">
+                <h2> Warten</h2>
+                <div class="task-list" id="warten" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+            <div class="column erledigt">
+                <h2> Erledigt</h2>
+                <div class="task-list" id="erledigt" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+        </div>
+    </div>  
+
+    <script src="script.js"></script>
+</body>
+</html>
